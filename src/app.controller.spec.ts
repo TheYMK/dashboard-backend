@@ -15,8 +15,10 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return a message object', () => {
+      expect(appController.welcomeMessage()).toEqual({
+        message: 'Welcome to the YVANIG Tour API',
+      });
     });
   });
 });
