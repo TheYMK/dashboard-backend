@@ -10,3 +10,11 @@ Steps to run the project:
 
 link to the frontend repository (steps to run the frontend are in the readme file of the frontend repository): <br/>
 https://github.com/TheYMK/dashboard-frontend
+
+
+<br/>
+<br/>
+
+DEMO: <br/>
+
+<video src="https://user-images.githubusercontent.com/22744551/197218399-8423a1f7-52b3-4937-a79a-3a2db6256bf4.MOV"></video>
