@@ -23,6 +23,16 @@ export class UsersService {
     }
   }
 
+  async findAll(role: UserRole) {
+    const users = await this.repo.find({
+      where: {
+        role: role,
+      },
+    });
+
+    return users;
+  }
+
   async findOne(id: number) {
     const user = await this.repo.findOne(id);
 

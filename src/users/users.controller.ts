@@ -21,7 +21,9 @@ import {
   ApiTags,
   ApiUnauthorizedResponse,
 } from '@nestjs/swagger';
+import { AdminGuard } from 'src/guards/admin.guard';
 import { AuthGuard } from 'src/guards/auth.guard';
+import { SuperAdminGuard } from 'src/guards/superadmin.guard';
 import { Serialize } from 'src/interceptors/serialize.interceptor';
 import { AuthService } from './auth.service';
 import { CurrentUser } from './decorators/current-user.decorator';
@@ -29,7 +31,7 @@ import { CreateUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UserCredentialsDto } from './dtos/user-credentials.dto';
 import { UserDto } from './dtos/user.dto';
-import { User } from './user.entity';
+import { User, UserRole } from './user.entity';
 import { UsersService } from './users.service';
 
 @ApiTags('users')
@@ -149,6 +151,24 @@ export class UsersController {
   @ApiOkResponse({ description: 'The user was successfully fetched' })
   whoAmI(@CurrentUser() user: User) {
     return user;
+  }
+
+  @Get('/allUsers')
+  @UseGuards(AdminGuard)
+  @ApiOkResponse({
+    description: 'Users were found successfully',
+  })
+  getAllUsers(@CurrentUser() user: User) {
+    return this.userService.findAll(UserRole.USER);
+  }
+
+  @Get('/allAdmins')
+  @UseGuards(SuperAdminGuard)
+  @ApiOkResponse({
+    description: 'Admins were found successfully',
+  })
+  getAllAdmins(@CurrentUser() user: User) {
+    return this.userService.findAll(UserRole.ADMIN);
   }
 
   // LAST TIME REVIEWED: 2022-04-09
