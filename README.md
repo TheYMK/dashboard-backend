@@ -15,6 +15,10 @@ https://github.com/TheYMK/dashboard-frontend
 <br/>
 <br/>
 
-DEMO: <br/>
+DEMO (Test de positionnement): <br/>
 
 <video src="https://user-images.githubusercontent.com/22744551/197218399-8423a1f7-52b3-4937-a79a-3a2db6256bf4.MOV"></video>
+
+DEMO (Workshop Part 1): <br/>
+
+<video src="https://user-images.githubusercontent.com/22744551/198595598-2ffa8d3b-4c78-4a79-8477-b6ef327d5613.mov"></video>
