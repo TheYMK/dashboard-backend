@@ -11,6 +11,9 @@ Steps to run the project:
 link to the frontend repository (steps to run the frontend are in the readme file of the frontend repository): <br/>
 https://github.com/TheYMK/dashboard-frontend
 
+<br/>
+1) Deployed frontend application link: https://dashboard-frontend-two.vercel.app (Few deployment bugs. Fix is in progress) <br/>
+2)  Deployed backend api link: https://dashboard-by-kaym-kassai-api.herokuapp.com <br/>
 
 <br/>
 <br/>
