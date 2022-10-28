@@ -5,7 +5,7 @@
   "repository": "https://github.com/TheYMK/dashboard-backend",
   "success_url": "/",
   "scripts": {
-    "predeploy": "npm install && npm run typeorm migration:run && npm run build"
+    "predeploy": "npm install && npm run build"
   },
   "env": {
     "NODE_ENV": {
