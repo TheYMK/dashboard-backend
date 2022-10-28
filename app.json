@@ -5,7 +5,7 @@
   "repository": "https://github.com/TheYMK/dashboard-backend",
   "success_url": "/",
   "scripts": {
-    "predeploy": "npm install && npm run build"
+    "predeploy": "npm install && npm install -g ts-node typescript && npm run build"
   },
   "env": {
     "NODE_ENV": {
