@@ -32,9 +32,10 @@ switch (process.env.NODE_ENV) {
     console.log('proddb: ', process.env.PROD_DATABASE_URL)
     Object.assign(dbConfig, {
       type: 'postgres',
-      url: process.env.PROD_DATABASE_URL,
+      url: process.env.DATABASE_URL || process.env.PROD_DATABASE_URL,
       migrationsRun: true,
       entities: ['**/*.entity.js'],
+      ssl: { rejectUnauthorized: false }
     })
     break;
   default:
